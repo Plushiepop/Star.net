@@ -1,0 +1,108 @@
+/* General styles for all screen sizes */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    background-image: url('grainy-texture.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    border-right: 2px solid #ffffff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12.9px;
+    font-family: 'Canva Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sidebar ul li a.active {
+    text-decoration: underline;
+}
+
+/* Content styles */
+.content {
+    margin-left: 170px;
+    padding: 20px;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 120px;
+    }
+
+    .content {
+        margin-left: 140px;
+    }
+
+    .sidebar ul li a {
+        font-size: 11px;
+    }
+
+    .logo-image {
+        max-width: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 100px;
+    }
+
+    .content {
+        margin-left: 110px;
+    }
+
+    .sidebar ul li a {
+        font-size: 10px;
+    }
+
+    .logo-image {
+        max-width: 25px;
+    }
+
+    .artist-title,
+    .magazine-title,
+    .events-title {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .artist-image,
+    .magazine-image {
+        max-width: 80%;
+        margin-left: 10px;
+    }
+
+    .events-content {
+        margin-left: 10px;
+    }
+}
